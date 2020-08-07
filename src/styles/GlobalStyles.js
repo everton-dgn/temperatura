@@ -11,11 +11,13 @@ export default createGlobalStyle`
         outline: none;
         -webkit-font-smoothing: antialiased!important;
         font-family: 'Roboto', sans-serif;
+        color: var(--colorWhite);
     }
 
-    //html, body, #root {
-    //    height: 100%;
-    //}
+    html, body, #root {
+        height: 100%;
+        background: var(--bgMain);
+    }
 
     button, input {
         border: 0;
@@ -27,7 +29,11 @@ export default createGlobalStyle`
     }
 
     :root {
-       --primary: #36393f;
-
+        --primary: #36393f;
+        --fontP: 15px;
+        --fontH1: 30px;
+        --fontH2: 20px;
+        --bgMain: #212429;
+        --colorWhite: #fff;
   }
 `;
