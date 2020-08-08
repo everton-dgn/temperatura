@@ -1,53 +1,24 @@
 import React from 'react';
-import {Title, City, Circle, Control, Auto} from './styles';
+import Auto from "../../components/Auto";
+import Circle from "../../components/Circle";
+import City from "../../components/City";
+import Control from "../../components/Control";
+import Footer from "../../components/Footer";
+import Title from "../../components/Title";
 
 const Home = () => {
     return <>
-        <Title>
-            <div>
-                <h1>TEMPERATURA</h1>
-            </div>
-        </Title>
+        <Title/>
 
-        <City>
-            <div>
-                <button>AA</button>
-            </div>
-            <div>Cidade</div>
-            <div>
-                <button>BB</button>
-            </div>
-        </City>
+        <City/>
 
-        <Circle>
-            <div className="circleColor">
-                <div className="circleMain">
-                    <div className="unity">°C</div>
-                    <div className="Temperature">29</div>
-                    <div className="current">29°C agora</div>
-                </div>
-            </div>
-        </Circle>
+        <Circle/>
 
-        <Control>
-            <div>
-                <button>Ma</button>
-            </div>
-            <div>
-                <button>Mi</button>
-            </div>
-            <div>
-                <button>Up</button>
-            </div>
-        </Control>
+        <Control/>
 
-        <Auto>
+        <Auto/>
 
-        </Auto>
-
-        <div>
-
-        </div>
+        <Footer/>
     </>;
 };
 
