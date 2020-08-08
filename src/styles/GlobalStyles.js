@@ -19,6 +19,14 @@ export default createGlobalStyle`
         background: var(--bgMain);
     }
 
+    #root > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex: 1;
+    }
+
     button, input {
         border: 0;
         outline: 0;
@@ -29,11 +37,14 @@ export default createGlobalStyle`
     }
 
     :root {
-        --primary: #36393f;
         --fontP: 15px;
         --fontH1: 30px;
         --fontH2: 20px;
+        --fontTemp: 130px;
         --bgMain: #212429;
         --colorWhite: #fff;
+        --green: #00b3b3;
+        --red: #E43F39;
+        --blue: #3E9BF8;
   }
 `;
