@@ -9,7 +9,7 @@ const Day = () => {
                 <button><ArrowL/></button>
             </div>
             <div className="day">
-                Qua, 29/04
+                Quarta, 29/04
             </div>
             <div>
                 <button><ArrowR/></button>

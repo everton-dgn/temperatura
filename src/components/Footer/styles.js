@@ -3,7 +3,6 @@ import {Thermometer} from "styled-icons/boxicons-solid";
 import {HelpOutline} from "styled-icons/material-rounded";
 import {LightBulb} from "styled-icons/heroicons-outline";
 import {MoonOutline} from "styled-icons/evaicons-outline";
-import {Gear} from "styled-icons/octicons";
 import {Search} from "styled-icons/ionicons-solid";
 
 export const CompFooter = styled.div`
@@ -35,12 +34,6 @@ export const Light = styled(LightBulb)`
 `;
 
 export const Dark = styled(MoonOutline)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
-`;
-
-export const Config = styled(Gear)`
     width: 30px;
     height: 30px;
     color: #fff;

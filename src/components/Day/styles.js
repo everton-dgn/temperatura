@@ -21,6 +21,7 @@ export const CompDay = styled.div`
 
     .day {
         font-size: var(--fontDay);
+        white-space: nowrap;
     }
 `;
 

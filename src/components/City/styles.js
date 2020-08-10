@@ -9,6 +9,6 @@ export const CompCity = styled.div`
 
     h1 {
         font-size: var(--fontH1);
-        padding: 30px 20px;
+        padding: 30px 20px 0 20px;
     }
 `;

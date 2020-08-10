@@ -1,5 +1,5 @@
 import React from "react";
-import {CompControl, Max, Min, Win} from './styles';
+import {CompControl, Max, Min, Win, Wtr} from './styles';
 
 export const Control = () => {
 
@@ -13,6 +13,9 @@ export const Control = () => {
             </div>
             <div>
                 <button><Win/></button>
+            </div>
+            <div>
+                <button><Wtr/></button>
             </div>
         </CompControl>
     );

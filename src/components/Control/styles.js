@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {LocalFireDepartment} from "styled-icons/material";
+import {Water} from "styled-icons/ionicons-outline";
 import {Snowflake, Wind} from "styled-icons/fa-solid";
 
 export const CompControl = styled.div`
@@ -32,6 +33,12 @@ export const Min = styled(Snowflake)`
 `;
 
 export const Win = styled(Wind)`
+    width: 30px;
+    height: 30px;
+    color: #fff;
+`;
+
+export const Wtr = styled(Water)`
     width: 30px;
     height: 30px;
     color: #fff;

@@ -5,9 +5,12 @@ import Day from "../../components/Day";
 import Control from "../../components/Control";
 import Footer from "../../components/Footer";
 import City from "../../components/City";
+import teste from "../../API";
 
 const Home = () => {
     return <>
+        <teste/>
+
         <City/>
 
         <Day/>
