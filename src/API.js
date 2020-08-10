@@ -1,21 +1,30 @@
 import React from "react";
-// import axios from "axios";
 
-const teste = () => {
+const Teste = () => {
+    const URL = 'https://api.hgbrasil.com/weather?locale=pt&format=json-cors&key=1239f74b';
+
+    const locale = 'locale=pt';
+
+    const Api = async (url) => {
+        const response = await fetch(url);
+        const json = await (await response.json()).results;
+        console.log(json)
+    }
+    Api(URL);
 
     return (
-        <>
-            <h3>Clima nas suas Coordenadas (Exemplo)</h3>
+        <section>
+            <h3>Clima nas suas Coordenadas</h3>
             <hr/>
             <ul>
-                <li>Temperatura atual: x°</li>
-                <li>Temperatura máxima: x°</li>
-                <li>Temperatura minima: x°</li>
-                <li>Pressão: x hpa</li>
-                <li>Umidade: x%</li>
+                <li>Temperatura atual: {}°</li>
+                <li>Temperatura máxima: {}°</li>
+                <li>Temperatura minima: {}°</li>
+                <li>Velocidade do vento: {}km/h</li>
+                <li>Humidade: {}%</li>
             </ul>
-        </>
+        </section>
     );
 };
 
-export default teste;
+export default Teste;
