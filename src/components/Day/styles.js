@@ -12,9 +12,10 @@ export const CompDay = styled.div`
         flex: 1;
 
         button {
-            background: black;
+            background: var(--bgButton);
             border-radius: 50%;
             padding: 5px;
+            box-shadow: 1px 1px 12px #000000, -1px -1px 9px #6d6f73;
         }
     }
 

@@ -5,8 +5,7 @@ const Auto = () => {
 
     return (
         <CompAuto>
-            <div>Automático</div>
-            <div>Botão</div>
+            <div>@ Automático</div>
         </CompAuto>
     );
 };

@@ -11,9 +11,10 @@ export const CompControl = styled.div`
         padding: 50px 20px;
 
         button {
-            background: black;
+            background: var(--bgButton);
             border-radius: 50%;
             padding: 15px;
+            box-shadow: 1px 1px 12px #000000, -1px -1px 9px #6d6f73
         }
     }
 `;

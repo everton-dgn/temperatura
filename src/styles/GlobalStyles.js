@@ -17,6 +17,8 @@ export default createGlobalStyle`
     html, body, #root {
         height: 100%;
         background: var(--bgMain);
+        display: flex;
+        flex-direction: column;
     }
 
     #root > div {
@@ -43,6 +45,7 @@ export default createGlobalStyle`
         --fontTemp: 130px;
         --fontDay: 25px;
         --bgMain: #212429;
+        --bgButton: #292d33;
         --colorWhite: #fff;
         --green: #00b3b3;
         --red: #E43F39;

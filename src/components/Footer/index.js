@@ -8,15 +8,19 @@ const Footer = () => {
             <div>
                 <Ther/>
             </div>
+
             <div>
-                <SearchBox/>
+                <Light/>
             </div>
+
             <div>
-               <Light/>
+               <SearchBox/>
             </div>
+
             <div>
                 <Config/>
             </div>
+
             <div>
                 <Help/>
             </div>

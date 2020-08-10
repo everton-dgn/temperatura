@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const CompCircle = styled.div`
-    padding: 40px 0;
+    padding: 10px 0;
 
     .circleColor {
         background: var(--green);
-        width: 350px;
-        height: 350px;
+        width: 330px;
+        height: 330px;
         border-radius: 50%;
-        padding: 30px;
+        padding: 35px;
+        box-shadow: inset 6px -1px 8px #000000a6;
 
         .circleMain {
-            background: var(--bgMain);
+            background-image: linear-gradient(90deg, #1d1f23, #42474e);
+            box-shadow: 4px 3px 14px #000;
             width: 100%;
             height: 100%;
             border-radius: 50%;
