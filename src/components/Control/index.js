@@ -1,18 +1,18 @@
 import React from "react";
-import {CompControl} from './styles';
+import {CompControl, Max, Min, Win} from './styles';
 
 export const Control = () => {
 
     return (
         <CompControl>
             <div>
-                <button>Ma</button>
+                <button><Max/></button>
             </div>
             <div>
-                <button>Mi</button>
+                <button><Min/></button>
             </div>
             <div>
-                <button>Up</button>
+                <button><Win/></button>
             </div>
         </CompControl>
     );

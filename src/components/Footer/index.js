@@ -1,24 +1,24 @@
 import React from "react";
-import {CompFooter} from './styles';
+import {CompFooter, Ther, Help, Light, Dark, Config, SearchBox} from './styles';
 
 const Footer = () => {
 
     return (
         <CompFooter>
             <div>
-                <button>AA</button>
+                <Ther/>
             </div>
             <div>
-                <button>BB</button>
+                <SearchBox/>
             </div>
             <div>
-                <button>CC</button>
+               <Light/>
             </div>
             <div>
-                <button>DD</button>
+                <Config/>
             </div>
             <div>
-                <button>EE</button>
+                <Help/>
             </div>
         </CompFooter>
     );

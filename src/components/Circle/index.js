@@ -9,7 +9,7 @@ const Circle = () => {
                 <div className="circleMain">
                     <div className="unity">°C</div>
                     <div className="Temperature">29</div>
-                    <div className="current">29°C agora</div>
+                    <div className="current">Agora</div>
                 </div>
             </div>
         </CompCircle>

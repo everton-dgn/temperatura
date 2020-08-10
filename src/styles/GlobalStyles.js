@@ -41,6 +41,7 @@ export default createGlobalStyle`
         --fontH1: 30px;
         --fontH2: 20px;
         --fontTemp: 130px;
+        --fontDay: 25px;
         --bgMain: #212429;
         --colorWhite: #fff;
         --green: #00b3b3;

@@ -6,13 +6,7 @@ const City = () => {
     return (
         <CompCity>
             <div>
-                <button>AA</button>
-            </div>
-            <div>
-                Cidade
-            </div>
-            <div>
-                <button>BB</button>
+                <h1>São Paulo, SP</h1>
             </div>
         </CompCity>
     );
