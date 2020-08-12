@@ -1,9 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Key_api from "./API_KEY";
 
 const Teste = () => {
-    const URL = 'https://api.hgbrasil.com/weather?locale=pt&format=json-cors&key=1239f74b';
+    const [location, setLocation] = useState(false);
+    const [weather, setWeather] = useState(false);
+
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            // getWeather(position.coords.latitude, position.coords.longitude);
+            setLocation(true)
+        })
+    }, [])
 
     const locale = 'locale=pt';
+    // const lat = 'lat=';
+    // const log = 'log=';
+    const ip = 'user_ip=remote';
+
+    const URL = `
+    https://api.hgbrasil.com/weather?format=json-cors&key=
+    ${Key_api}&
+    ${locale}&
+    ${ip}
+    `;
 
     const Api = async (url) => {
         const response = await fetch(url);
