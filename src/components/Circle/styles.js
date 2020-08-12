@@ -24,6 +24,7 @@ export const CompCircle = styled.div`
                 border-radius: 15px;
                 margin-top: 101px;
                 margin-left: -63px;
+                box-shadow: 2px 4px 6px #000000eb;
             }
 
             background-image: linear-gradient(90deg, #1d1f23, #42474e);
@@ -72,7 +73,7 @@ export const CompCircle = styled.div`
         background-color: var(--green);
         border-radius: 50%;
         transform: rotate(-135deg);
-        animation: circle 3s linear infinite;
+        //animation: circle 3s linear infinite alternate;
 
         @keyframes circle {
             0% {

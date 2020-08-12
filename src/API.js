@@ -1,49 +1,46 @@
 import React, {useState, useEffect} from "react";
+import axios from 'axios';
 import Key_api from "./API_KEY";
 
-const Teste = () => {
+const Climate = () => {
     const [location, setLocation] = useState(false);
     const [weather, setWeather] = useState(false);
 
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition((position) => {
-            // getWeather(position.coords.latitude, position.coords.longitude);
+    const getWeather = async (lat, long) => {
+        const res = await axios.get("https://api.hgbrasil.com/weather", {
+            params: {
+                format:'json-cors',
+                locale: 'pt',
+                lat: lat,
+                lon: long,
+                user_ip: 'remote',
+                key: Key_api,
+            }
+        });
+        setWeather(res.data);
+    }
+
+    useEffect(()=> {
+        navigator.geolocation.getCurrentPosition((position)=> {
+            getWeather(position.coords.latitude, position.coords.longitude);
             setLocation(true)
         })
-    }, [])
-
-    const locale = 'locale=pt';
-    // const lat = 'lat=';
-    // const log = 'log=';
-    const ip = 'user_ip=remote';
-
-    const URL = `
-    https://api.hgbrasil.com/weather?format=json-cors&key=
-    ${Key_api}&
-    ${locale}&
-    ${ip}
-    `;
-
-    const Api = async (url) => {
-        const response = await fetch(url);
-        const json = await (await response.json()).results;
-        console.log(json)
-    }
-    Api(URL);
+    }, []);
 
     return (
         <section>
-            <h3>Clima nas suas Coordenadas</h3>
-            <hr/>
             <ul>
+                <li>Cidade: {}</li>
+                <li>Dia: {}</li>
                 <li>Temperatura atual: {}°</li>
                 <li>Temperatura máxima: {}°</li>
                 <li>Temperatura minima: {}°</li>
                 <li>Velocidade do vento: {}km/h</li>
                 <li>Humidade: {}%</li>
+                <li>Previsão: {}</li>
             </ul>
         </section>
     );
 };
 
-export default Teste;
+export default Climate;

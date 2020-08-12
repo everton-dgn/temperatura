@@ -5,11 +5,11 @@ import Day from "../../components/Day";
 import Control from "../../components/Control";
 import Footer from "../../components/Footer";
 import City from "../../components/City";
-import Teste from "../../API";
+import Climate from "../../API";
 
 const Home = () => {
     return <>
-        <Teste/>
+        <Climate/>
 
         <City/>
 
