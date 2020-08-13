@@ -1,11 +1,11 @@
 import React from "react";
 import {CompAuto} from './styles';
 
-const Auto = () => {
+const Auto = (props) => {
 
     return (
         <CompAuto>
-            <div>@ Automático</div>
+            <div>{props.description}</div>
         </CompAuto>
     );
 };

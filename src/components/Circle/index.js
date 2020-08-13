@@ -1,16 +1,22 @@
 import React from "react";
 import {CompCircle} from './styles';
 
-const Circle = () => {
+const Circle = (props) => {
 
     return (
         <CompCircle>
             <div className="circleColor">
 
                 <div className="circleMain">
-                    <div className="unity">°C</div>
-                    <div className="Temperature">29</div>
-                    <div className="current">Agora</div>
+                    <div className="unity">
+                        {props.uni}
+                    </div>
+                    <div className="Temperature">
+                        {props.temp}
+                    </div>
+                    <div className="current">
+                        {props.current}
+                    </div>
                 </div>
             </div>
             <div className="load"></div>

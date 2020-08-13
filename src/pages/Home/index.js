@@ -24,14 +24,14 @@ const Home = () => {
                 key: Key_api,
             }
         });
-        setWeather(res.data);
-        console.log(res.data)
+        setWeather(res.data.results);
+        console.log(res.data.results)
     }
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((position) => {
             getWeather(position.coords.latitude, position.coords.longitude);
-            setLocation(true)
+            setLocation(true);
         })
     }, []);
 
@@ -45,26 +45,32 @@ const Home = () => {
         </Alert>;
     } else {
         return <>
-            <ul>
-                <li>Cidade: {}</li>
-                <li>Dia: {}</li>
-                <li>Temperatura atual: {}°</li>
-                <li>Temperatura máxima: {}°</li>
-                <li>Temperatura minima: {}°</li>
-                <li>Velocidade do vento: {}km/h</li>
-                <li>Humidade: {}%</li>
-                <li>Previsão: {}</li>
-            </ul>
+              {/*  {weather.forecast.map(item => item.max)[0]}
 
-            <City/>
+                {weather.forecast.map(item => item.min)[0]}
 
-            <Day/>
+                {weather.wind_speedy.replace(' km/h', '')}
 
-            <Circle/>
+                {weather.humidity}*/}
+
+            <City city={weather.city}/>
+
+            <Day
+                week={weather.forecast.map(item => item.weekday)[0]}
+                month={weather.forecast.map(item => item.date)[0]}
+            />
+
+            <Circle
+                temp={weather.temp}
+                uni={'°C'}
+                current={'Agora'}
+            />
 
             <Control/>
 
-            <Auto/>
+            <Auto
+                description={weather.description}
+            />
 
             <Footer/>
         </>;
