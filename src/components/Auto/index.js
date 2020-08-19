@@ -5,7 +5,14 @@ const Auto = (props) => {
 
     return (
         <CompAuto>
-            <div>{props.description}</div>
+            <div>
+                <img
+                    src={require('../../images/'+ props.image + '.png')}
+                    alt={props.description}/>
+                    <p>
+                        {props.description}
+                    </p>
+            </div>
         </CompAuto>
     );
 };

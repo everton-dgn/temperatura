@@ -26,7 +26,9 @@ export default createGlobalStyle`
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin: 0 auto;
         flex: 1;
+        max-width: 1000px;
     }
 
     button, input {
@@ -47,6 +49,7 @@ export default createGlobalStyle`
         --bgMain: #212429;
         --bgButton: #292d33;
         --colorWhite: #fff;
+        --grayIcon: #c6c6c6;
         --green: #00b3b3;
         --red: #E43F39;
         --blue: #3E9BF8;

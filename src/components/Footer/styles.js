@@ -11,36 +11,37 @@ export const CompFooter = styled.div`
         justify-content: center;
         align-items: center;
         flex: 1;
-        padding: 50px 20px;
+        padding: 10px 20px 50px 20px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--grayIcon);
+            transition: all .2s linear;
+
+            &:hover {
+                filter: drop-shadow(2px 3px 6px #000);
+                fill: var(--colorWhite);
+                cursor: pointer;
+                transform: translateY(-1px);
+            }
+        }
     }
 `;
 
-export const Ther = styled(Thermometer)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
-`;
+export const Ther = styled(Thermometer)``;
 
-export const Help = styled(HelpOutline)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
-`;
+export const Help = styled(HelpOutline)``;
 
 export const Light = styled(LightBulb)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
+    fill: transparent!important;
+    stroke: var(--grayIcon)!important;
+
+    &:hover {
+        stroke: var(--colorWhite)!important;
+    }
 `;
 
-export const Dark = styled(MoonOutline)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
-`;
+export const Dark = styled(MoonOutline)``;
 
-export const SearchBox = styled(Search)`
-    width: 30px;
-    height: 30px;
-    color: #fff;
-`;
+export const SearchBox = styled(Search)``;

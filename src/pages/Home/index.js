@@ -45,7 +45,7 @@ const Home = () => {
         </Alert>;
     } else {
         return <>
-              {/*  {weather.forecast.map(item => item.max)[0]}
+            {/*  {weather.forecast.map(item => item.max)[0]}
 
                 {weather.forecast.map(item => item.min)[0]}
 
@@ -53,7 +53,9 @@ const Home = () => {
 
                 {weather.humidity}*/}
 
-            <City city={weather.city}/>
+            <City
+                city={weather.city}
+            />
 
             <Day
                 week={weather.forecast.map(item => item.weekday)[0]}
@@ -69,7 +71,8 @@ const Home = () => {
             <Control/>
 
             <Auto
-                description={weather.description}
+                image={weather.img_id}
+                description={weather.forecast.map(item => item.description)[0]}
             />
 
             <Footer/>

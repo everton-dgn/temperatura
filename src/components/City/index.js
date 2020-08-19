@@ -1,12 +1,12 @@
 import React from "react";
 import {CompCity} from './styles';
 
-const City = (props) => {
+const City = ({city}) => {
 
     return (
         <CompCity>
             <div>
-                <h1>{props.city}</h1>
+                <h1>{city}</h1>
             </div>
         </CompCity>
     );
