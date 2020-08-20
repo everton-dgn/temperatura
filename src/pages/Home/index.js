@@ -6,7 +6,6 @@ import Control from "../../components/Control";
 import Footer from "../../components/Footer";
 import City from "../../components/City";
 import axios from 'axios';
-import Key_api from "../../API_KEY";
 import {Alert} from "./styles";
 
 const Home = () => {
@@ -21,11 +20,11 @@ const Home = () => {
                 lat: lat,
                 lon: long,
                 user_ip: 'remote',
-                key: Key_api,
+                key: process.env.API_KEY,
             }
         });
         setWeather(res.data.results);
-        console.log(res.data.results)
+        console.log(res.data.results);
     }
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import {CompFooter, Ther, Help, Light, Dark, SearchBox} from './styles';
+import {CompFooter, Ther, Update, Light, Dark, SearchBox} from './styles';
 
 const Footer = () => {
 
@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
 
             <div>
-                <Help/>
+                <Update/>
             </div>
         </CompFooter>
     );

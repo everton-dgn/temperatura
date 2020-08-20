@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {Thermometer} from "styled-icons/boxicons-solid";
-import {HelpOutline} from "styled-icons/material-rounded";
-import {LightBulb} from "styled-icons/heroicons-outline";
+import {LightBulb, Refresh} from "styled-icons/heroicons-outline";
 import {MoonOutline} from "styled-icons/evaicons-outline";
 import {Search} from "styled-icons/ionicons-solid";
 
@@ -11,7 +10,7 @@ export const CompFooter = styled.div`
         justify-content: center;
         align-items: center;
         flex: 1;
-        padding: 10px 20px 50px 20px;
+        padding: 10px 20px 40px 20px;
 
         svg {
             width: 30px;
@@ -31,7 +30,14 @@ export const CompFooter = styled.div`
 
 export const Ther = styled(Thermometer)``;
 
-export const Help = styled(HelpOutline)``;
+export const Update = styled(Refresh)`
+    fill: transparent!important;
+    stroke: var(--grayIcon)!important;
+
+    &:hover {
+        stroke: var(--colorWhite)!important;
+    }
+`;
 
 export const Light = styled(LightBulb)`
     fill: transparent!important;

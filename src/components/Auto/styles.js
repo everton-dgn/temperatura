@@ -6,13 +6,15 @@ export const CompAuto = styled.div`
         justify-content: center;
         padding: 0 20px;
         align-items: center;
+        width: 100%;
 
         img {
-            width: 200px;
+            width: 170px;
         }
 
         p {
             font-size: var(--fontH2);
+            padding-left: 20px;
         }
     }
 `;
