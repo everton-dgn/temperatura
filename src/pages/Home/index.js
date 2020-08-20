@@ -72,7 +72,7 @@ const Home = () => {
 
             <Auto
                 image={weather.img_id}
-                description={weather.forecast.map(item => item.description)[0]}
+                description={weather.description}
             />
 
             <Footer/>
