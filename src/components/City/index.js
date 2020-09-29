@@ -6,7 +6,7 @@ const City = ({city}) => {
     return (
         <CompCity>
             <div>
-                <h1>{city}</h1>
+                {/*<h1>{city}</h1>*/}
             </div>
         </CompCity>
     );

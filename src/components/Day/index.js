@@ -11,10 +11,10 @@ const Day = (props) => {
                 </button>
             </div>
             <div className="dayL">
-                {props.week},
+                {/*{props.week},*/}
             </div>
             <div className="dayR">
-                {props.month}
+                {/*{props.month}*/}
             </div>
             <div>
                 <button>

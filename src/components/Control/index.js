@@ -1,7 +1,9 @@
 import React from "react";
 import {CompControl, Max, Min, Win, Wtr} from './styles';
 
-export const Control = () => {
+export const Control = (
+    {max, min}
+) => {
 
     return (
         <CompControl>

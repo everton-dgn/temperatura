@@ -6,11 +6,11 @@ const Auto = (props) => {
     return (
         <CompAuto>
             <div>
-                <img
+                {/*<img
                     src={require('../../images/'+ props.image + '.png')}
-                    alt={props.description}/>
+                    alt={props.description}/>*/}
                     <p>
-                        {props.description}
+                        {/*{props.description}*/}
                     </p>
             </div>
         </CompAuto>

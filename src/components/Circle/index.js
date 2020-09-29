@@ -9,13 +9,13 @@ const Circle = (props) => {
 
                 <div className="circleMain">
                     <div className="unity">
-                        {props.uni}
+                        {/*{props.uni}*/}
                     </div>
                     <div className="Temperature">
-                        {props.temp}
+                        {/*{props.temp}*/}
                     </div>
                     <div className="current">
-                        {props.current}
+                        {/*{props.current}*/}
                     </div>
                 </div>
             </div>

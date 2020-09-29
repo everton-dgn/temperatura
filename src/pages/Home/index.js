@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import Auto from "../../components/Auto";
 import Circle from "../../components/Circle";
 import Day from "../../components/Day";
@@ -7,10 +7,18 @@ import Footer from "../../components/Footer";
 import City from "../../components/City";
 import axios from 'axios';
 import {Alert} from "./styles";
+import {ClimeProvider, useClime} from '../../context/Temperature';
 
 const Home = () => {
-    const [location, setLocation] = useState(false);
-    const [weather, setWeather] = useState(false);
+
+    const {
+        location,
+        setLocation,
+        weather,
+        setWeather
+    } = useClime;
+
+    console.log(weather)
 
     const getWeather = async (lat, long) => {
         const res = await axios.get("https://api.hgbrasil.com/weather", {
@@ -31,7 +39,7 @@ const Home = () => {
         navigator.geolocation.getCurrentPosition((position) => {
             getWeather(position.coords.latitude, position.coords.longitude);
             setLocation(true);
-        })
+        });
     }, []);
 
     if (location === false) {
@@ -44,37 +52,37 @@ const Home = () => {
         </Alert>;
     } else {
         return <>
-            {/*  {weather.forecast.map(item => item.max)[0]}
+            <ClimeProvider>
 
-                {weather.forecast.map(item => item.min)[0]}
+                <City
+                    // city={weather.city}
+                />
 
-                {weather.wind_speedy.replace(' km/h', '')}
+                <Day
+                    // week={weather.forecast.map(item => item.weekday)[0]}
+                    // month={weather.forecast.map(item => item.date)[0]}
+                />
 
-                {weather.humidity}*/}
+                <Circle
+                    // temp={weather.temp}
+                    uni={'°C'}
+                    current={'Agora'}
+                />
 
-            <City
-                city={weather.city}
-            />
+                <Control
+                    // max={weather.forecast.map(item => item.max)[0]}
+                    // min={weather.forecast.map(item => item.min)[0]}
+                    // wind={weather.wind_speedy.replace(' km/h', '')}
+                    // humidity={weather.humidity}
+                />
 
-            <Day
-                week={weather.forecast.map(item => item.weekday)[0]}
-                month={weather.forecast.map(item => item.date)[0]}
-            />
+                <Auto
+                    // image={weather.img_id}
+                    // description={weather.description}
+                />
 
-            <Circle
-                temp={weather.temp}
-                uni={'°C'}
-                current={'Agora'}
-            />
-
-            <Control/>
-
-            <Auto
-                image={weather.img_id}
-                description={weather.description}
-            />
-
-            <Footer/>
+                <Footer/>
+            </ClimeProvider>
         </>;
     }
 };
