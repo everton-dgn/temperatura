@@ -1,4 +1,3 @@
-import React from "react";
 import {CompFooter, Ther, Update, Light, Dark, SearchBox} from './styles';
 
 const Footer = () => {

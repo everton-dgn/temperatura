@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CompCity } from './styles';
 import { useClime } from '../../context';
 

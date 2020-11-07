@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CompDay, ArrowL, ArrowR } from './styles';
 import { useClime } from '../../context';
 

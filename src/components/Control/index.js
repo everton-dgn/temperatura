@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CompControl, Max, Min, Win, Wtr } from './styles';
 import { useClime } from '../../context';
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CompAuto } from './styles';
 import { useClime } from '../../context';
 
@@ -21,7 +21,7 @@ const Auto = () => {
     return <>
         <CompAuto>
             <div>
-                <img src={require('../../images/'+ img + '.png')} alt='Imagem'/>
+                <img src={require(`../../images/${img}.png`)} alt='Imagem'/>
                 <p>
                     {description}
                 </p>
