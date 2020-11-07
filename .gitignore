@@ -2,7 +2,7 @@
 .idea
 .vscode
 src/API_KEY
-.env
+.env*.local
 # dependencies
 /node_modules
 /.pnp

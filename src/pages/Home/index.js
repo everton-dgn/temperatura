@@ -1,13 +1,13 @@
-import React, {useEffect} from "react";
-import Auto from "../../components/Auto";
-import Circle from "../../components/Circle";
-import Day from "../../components/Day";
-import Control from "../../components/Control";
-import Footer from "../../components/Footer";
-import City from "../../components/City";
+import React, { useEffect } from 'react';
+import Auto from '../../components/Auto';
+import Circle from '../../components/Circle';
+import Day from '../../components/Day';
+import Control from '../../components/Control';
+import Footer from '../../components/Footer';
+import City from '../../components/City';
 import axios from 'axios';
-import {Alert} from "./styles";
-import {ClimeProvider, useClime} from '../../context/Temperature';
+import { Alert } from './styles';
+import { useClime } from '../../context';
 
 const Home = () => {
 
@@ -15,29 +15,27 @@ const Home = () => {
         location,
         setLocation,
         weather,
-        setWeather
-    } = useClime;
-
-    console.log(weather)
+        setWeather,
+    } = useClime();
 
     const getWeather = async (lat, long) => {
-        const res = await axios.get("https://api.hgbrasil.com/weather", {
+        const res = await axios.get('https://api.hgbrasil.com/weather', {
             params: {
                 format: 'json-cors',
                 locale: 'pt',
                 lat: lat,
                 lon: long,
                 user_ip: 'remote',
-                key: process.env.API_KEY,
-            }
+                key: process.env.REACT_APP_API_KEY,
+            },
         });
         setWeather(res.data.results);
         console.log(res.data.results);
-    }
+    };
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((position) => {
-            getWeather(position.coords.latitude, position.coords.longitude);
+            getWeather(position.coords.latitude, position.coords.longitude).then(r => r);
             setLocation(true);
         });
     }, []);
@@ -52,37 +50,18 @@ const Home = () => {
         </Alert>;
     } else {
         return <>
-            <ClimeProvider>
 
-                <City
-                    // city={weather.city}
-                />
+            <City/>
 
-                <Day
-                    // week={weather.forecast.map(item => item.weekday)[0]}
-                    // month={weather.forecast.map(item => item.date)[0]}
-                />
+            <Day/>
 
-                <Circle
-                    // temp={weather.temp}
-                    uni={'°C'}
-                    current={'Agora'}
-                />
+            <Circle/>
 
-                <Control
-                    // max={weather.forecast.map(item => item.max)[0]}
-                    // min={weather.forecast.map(item => item.min)[0]}
-                    // wind={weather.wind_speedy.replace(' km/h', '')}
-                    // humidity={weather.humidity}
-                />
+            <Control/>
 
-                <Auto
-                    // image={weather.img_id}
-                    // description={weather.description}
-                />
+            <Auto/>
 
-                <Footer/>
-            </ClimeProvider>
+            <Footer/>
         </>;
     }
 };

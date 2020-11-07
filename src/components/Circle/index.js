@@ -1,7 +1,23 @@
-import React from "react";
-import {CompCircle} from './styles';
+import React, { useEffect } from 'react';
+import { CompCircle } from './styles';
+import { useClime } from '../../context';
 
-const Circle = (props) => {
+const Circle = () => {
+    const {
+        uni,
+        setUni,
+        temp,
+        setTemp,
+        current,
+        setCurrent,
+        weather,
+    } = useClime();
+
+    useEffect(() => {
+        setUni('°C');
+        setTemp(weather.temp);
+        setCurrent('Agora');
+    }, [setCurrent, setTemp, setUni, weather.temp]);
 
     return (
         <CompCircle>
@@ -9,13 +25,13 @@ const Circle = (props) => {
 
                 <div className="circleMain">
                     <div className="unity">
-                        {/*{props.uni}*/}
+                        {uni}
                     </div>
                     <div className="Temperature">
-                        {/*{props.temp}*/}
+                        {temp}
                     </div>
                     <div className="current">
-                        {/*{props.current}*/}
+                        {current}
                     </div>
                 </div>
             </div>
