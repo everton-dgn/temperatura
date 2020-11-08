@@ -3,6 +3,7 @@
 .vscode
 src/API_KEY
 .env*.local
+.env
 # dependencies
 /node_modules
 /.pnp
