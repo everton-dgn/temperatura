@@ -30,6 +30,7 @@ const Home = () => {
             },
         });
         setWeather(res.data.results);
+        console.log(res.data.results);
     };
 
     useEffect(() => {

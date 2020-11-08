@@ -67,19 +67,16 @@ export const useClime = () => {
     const {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current, setCurrent,
-        max, min, wind, setMax, setMin, setWind, setHumidity, image,
+        max, min, wind, humidity, setMax, setMin, setWind, setHumidity, image,
         setImage, description, setDescription,
     } = context;
     return {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current,
-        setCurrent, max, min, wind, setMax, setMin, setWind, setHumidity,
+        setCurrent, max, min, wind, humidity, setMax, setMin, setWind, setHumidity,
         image, setImage, description, setDescription, wind_speedy: undefined,
         forecast() {
             return undefined;
-        },
-        humidity() {
-
         },
         img_id() {
 
