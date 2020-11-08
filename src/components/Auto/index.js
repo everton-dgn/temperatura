@@ -21,7 +21,7 @@ const Auto = () => {
     return <>
         <CompAuto>
             <div>
-                <img src={require(`../../images/${img}.png`)} alt='Imagem'/>
+                <img src={require(`../../images/${img}.png`).default} alt='Imagem'/>
                 <p>
                     {description}
                 </p>
