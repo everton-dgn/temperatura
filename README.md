@@ -55,5 +55,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/an
 
 ### Deployment
 
-### `yarn build` fails to minify
+### `yarn build`
 
