@@ -13,7 +13,7 @@ const Day = () => {
 
     useEffect(() => {
         setDay(weather.forecast.map(item => item.weekday)[0]);
-        setMonth(weather.forecast.map(item => item.date)[0]);
+        setMonth(weather.date.slice(0, 5));
     }, [setDay, weather.forecast, setMonth]);
 
     return (
