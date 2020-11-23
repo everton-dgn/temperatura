@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CompCircle = styled.div`
     padding: 10px 0;
@@ -55,6 +55,24 @@ export const CompCircle = styled.div`
                 font-size: var(--fontTemp);
                 font-weight: 600;
                 align-items: center;
+
+                .dayMaxMin {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 30px 0;
+
+                    .dayMax, .dayMin {
+                        font-size: 30px;
+                        margin: 10px 0 0 0;
+                    }
+                }
+            }
+
+            span {
+                font-size: 76px;
+                color: var(--green);
+                font-weight: 600;
+                margin: 31px 0;
             }
 
             .current {

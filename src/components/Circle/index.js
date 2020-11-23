@@ -28,7 +28,7 @@ const Circle = () => {
                         {uni}
                     </div>
                     <div className="Temperature">
-                        {temp}
+                        {temp.length >= 3 ? <span>{temp}</span> : temp}
                     </div>
                     <div className="current">
                         {current}

@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import {Thermometer} from "styled-icons/boxicons-solid";
-import {LightBulb, Refresh} from "styled-icons/heroicons-outline";
-import {MoonOutline} from "styled-icons/evaicons-outline";
-import {Search} from "styled-icons/ionicons-solid";
+import styled from 'styled-components';
+import { Thermometer } from 'styled-icons/boxicons-solid';
+import { LightBulb, Refresh } from 'styled-icons/heroicons-outline';
+import { MoonOutline } from 'styled-icons/evaicons-outline';
+import { Search } from 'styled-icons/ionicons-solid';
 
 export const CompFooter = styled.div`
     div {
@@ -11,6 +11,10 @@ export const CompFooter = styled.div`
         align-items: center;
         flex: 1;
         padding: 10px 20px 40px 20px;
+
+        button {
+            background: transparent;
+        }
 
         svg {
             width: 30px;

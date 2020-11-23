@@ -1,26 +1,48 @@
-import {CompFooter, Ther, Update, Light, Dark, SearchBox} from './styles';
+import { CompFooter, Ther, Update, Light, Dark, SearchBox } from './styles';
+import { useClime } from '../../context';
 
 const Footer = () => {
+
+    const {
+        setUni,
+        setCurrent,
+        setTemp,
+        weather,
+    } = useClime();
+
+    const changeDefault = () => {
+        setTemp(weather.temp);
+        setCurrent('Agora');
+        setUni('°C');
+    };
 
     return (
         <CompFooter>
             <div>
-                <SearchBox/>
+                <button>
+                    <SearchBox />
+                </button>
             </div>
 
             <div>
-                <Ther/>
+                <button>
+                    <Ther />
+                </button>
             </div>
 
             <div>
-                <Light/>
+                <button>
+                    <Light />
+                </button>
             </div>
 
             <div>
-                <Update/>
+                <button onClick={changeDefault}>
+                    <Update />
+                </button>
             </div>
         </CompFooter>
     );
 };
 
-export default Footer
+export default Footer;

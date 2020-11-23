@@ -20,6 +20,8 @@ export const ClimeProvider = ({ children }) => {
     const [image, setImage] = useState(false);
     const [description, setDescription] = useState(false);
 
+    const [restore, setRestore] = useState(false)
+
     return <ClimeContext.Provider value={{
         location,
         setLocation,
