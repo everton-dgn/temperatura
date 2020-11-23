@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     *{
@@ -29,6 +29,12 @@ export default createGlobalStyle`
         margin: 0 auto;
         flex: 1;
         max-width: 1000px;
+    }
+
+    @media screen and (max-width: 483px) {
+        #root > div {
+            transform: scale(0.7);
+        }
     }
 
     button, input {

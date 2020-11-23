@@ -16,6 +16,11 @@ export const Control = () => {
         setWind,
         setHumidity,
         weather,
+        setCount,
+        setDay,
+        setMonth,
+        setDescription,
+        setDesc,
     } = useClime();
 
     useEffect(() => {
@@ -23,30 +28,47 @@ export const Control = () => {
         setMin(weather.forecast.map(item => item.min)[0]);
         setWind(weather.wind_speedy.replace(' km/h', ''));
         setHumidity(weather.humidity);
+        setCount(0)
     }, [setHumidity, setMax, setMin, setWind, weather.forecast, weather.humidity, weather.wind_speedy]);
+
+    const clearDay = () => {
+        setDesc(true);
+        setDescription(weather.description);
+        setCount(0);
+        setDay(weather.forecast.map(item => item.weekday)[0]);
+        setMonth(weather.date.slice(0, 5));
+    }
 
     const changeMax = () => {
         setTemp(max);
         setCurrent('Max.');
         setUni('°C');
+
+        clearDay();
     };
 
     const changeMin = () => {
         setTemp(min);
         setCurrent('Mín.');
         setUni('°C');
+
+        clearDay();
     };
 
     const changeWind = () => {
         setTemp(wind);
         setCurrent('Vento');
         setUni('Km/h');
+
+        clearDay();
     };
 
     const changeWtr = () => {
         setTemp(humidity);
         setCurrent('Umid.');
         setUni('%');
+
+        clearDay();
     };
 
     return (

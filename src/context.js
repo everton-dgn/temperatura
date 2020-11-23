@@ -9,7 +9,7 @@ export const ClimeProvider = ({ children }) => {
     const [day, setDay] = useState(false);
     const [month, setMonth] = useState(false);
     const [uni, setUni] = useState(false);
-    const [temp, setTemp] = useState(false);
+    const [temp, setTemp] = useState(0);
     const [current, setCurrent] = useState(false);
 
     const [max, setMax] = useState(false);
@@ -20,7 +20,8 @@ export const ClimeProvider = ({ children }) => {
     const [image, setImage] = useState(false);
     const [description, setDescription] = useState(false);
 
-    const [restore, setRestore] = useState(false)
+    const [count, setCount] = useState(0);
+    const [desc, setDesc] = useState(true);
 
     return <ClimeContext.Provider value={{
         location,
@@ -56,6 +57,11 @@ export const ClimeProvider = ({ children }) => {
         setImage,
         description,
         setDescription,
+
+        count,
+        setCount,
+        desc,
+        setDesc,
     }}>
         {children}
     </ClimeContext.Provider>;
@@ -70,13 +76,13 @@ export const useClime = () => {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current, setCurrent,
         max, min, wind, humidity, setMax, setMin, setWind, setHumidity, image,
-        setImage, description, setDescription,
+        setImage, description, setDescription, count, setCount, desc, setDesc,
     } = context;
     return {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current,
         setCurrent, max, min, wind, humidity, setMax, setMin, setWind, setHumidity,
-        image, setImage, description, setDescription, wind_speedy: undefined,
+        image, setImage, description, setDescription, wind_speedy: undefined, count, setCount, desc, setDesc,
         forecast() {
             return undefined;
         },

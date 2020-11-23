@@ -9,6 +9,7 @@ const Auto = () => {
         description,
         setDescription,
         weather,
+        desc,
     } = useClime();
 
     let img = weather.img_id;
@@ -20,12 +21,22 @@ const Auto = () => {
 
     return <>
         <CompAuto>
-            <div>
-                <img src={require(`../../images/${img}.png`).default} alt='Imagem'/>
-                <p>
-                    {description}
-                </p>
-            </div>
+            {desc &&
+                <div>
+                    <img src={require(`../../images/${img}.png`).default}
+                         alt='Imagem' />
+                    <p>
+                        {description}
+                    </p>
+                </div>
+            }
+            {!desc &&
+                <div>
+                    <p>
+                        {description}
+                    </p>
+                </div>
+            }
         </CompAuto>
     </>;
 };

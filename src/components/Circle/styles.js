@@ -12,6 +12,14 @@ export const CompCircle = styled.div`
         padding: 35px;
 
         .circleMain {
+            background-image: linear-gradient(90deg, #1d1f23, #42474e);
+            box-shadow: 4px 3px 14px #000;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
 
             &::after {
                 content: '';
@@ -26,15 +34,6 @@ export const CompCircle = styled.div`
                 margin-left: -63px;
                 box-shadow: 2px 4px 6px #000000eb;
             }
-
-            background-image: linear-gradient(90deg, #1d1f23, #42474e);
-            box-shadow: 4px 3px 14px #000;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
 
             div {
                 display: flex;
@@ -87,35 +86,8 @@ export const CompCircle = styled.div`
     .load {
         width: 330px;
         height: 330px;
+        display: block;
         position: absolute;
-        background-color: var(--green);
         border-radius: 50%;
-        transform: rotate(-135deg);
-        //animation: circle 3s linear infinite alternate;
-
-        @keyframes circle {
-            0% {
-                clip-path: polygon(100% 0, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 50% 50%);
-            }
-            25% {
-                clip-path: polygon(
-                    100% 0,
-                    100% 100%,
-                    100% 100%,
-                    100% 100%,
-                    100% 100%,
-                    50% 50%
-                );
-            }
-            50% {
-                clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 100%, 0 100%, 50% 50%);
-            }
-            75% {
-                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%, 0 0, 50% 50%);
-            }
-            100% {
-                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 100% 0, 50% 50%);
-            }
-        }
     }
 `;

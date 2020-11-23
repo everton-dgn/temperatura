@@ -12,62 +12,68 @@ const Day = () => {
         setTemp,
         setUni,
         setCurrent,
+        count,
+        setCount,
+        setDescription,
+        setDesc,
     } = useClime();
-
-    const [count, setCount] = useState(0);
-
-    const changeL = () => {
-        count > 0 ? setCount(count => count - 1) : setCount(0);
-        console.log('valor: ', count)
-
-        console.log(weather.forecast[count].weekday)
-        console.log(weather.forecast[count].date)
-        console.log(weather.forecast[count].description)
-        console.log(weather.forecast[count].max)
-        console.log(weather.forecast[count].min)
-        setDay(weather.forecast[count].weekday);
-        setMonth(weather.forecast[count].date);
-        setUni('°C');
-        setTemp(
-            <small className="dayMaxMin">
-                <span className="dayMax">Máx: {weather.forecast[count].max}</span>
-                <span className="dayMin">Mín: {weather.forecast[count].min}</span>
-            </small>
-        );
-        setCurrent('Previsão');
-    };
-
-    const changeR = () => {
-        count < 9 ? setCount(count => count + 1) : setCount(9);
-        console.log('valor: ', count)
-
-        console.log(weather.forecast[count].weekday)
-        console.log(weather.forecast[count].date)
-        console.log(weather.forecast[count].description)
-        console.log(weather.forecast[count].max)
-        console.log(weather.forecast[count].min)
-        setDay(weather.forecast[count].weekday);
-        setMonth(weather.forecast[count].date);
-        setUni('°C');
-        setTemp(
-            <small className="dayMaxMin">
-                <span className="dayMax">Máx: {weather.forecast[count].max}</span>
-                <span className="dayMin">Mín: {weather.forecast[count].min}</span>
-            </small>
-        );
-        setCurrent('Previsão');
-    };
 
     useEffect(() => {
         setDay(weather.forecast.map(item => item.weekday)[0]);
         setMonth(weather.date.slice(0, 5));
-    }, [setDay, weather.forecast, setMonth]);
+    }, [setDay, weather.forecast, setMonth, setCount]);
+
+    const changeL = () => {
+        setDesc(false);
+        if (count > 0) {
+            setCount(() => count - 1);
+            setDescription(weather.forecast[count].description)
+            setDay(weather.forecast[count - 1].weekday);
+            setMonth(weather.forecast[count - 1].date);
+            setUni('°C');
+            setTemp(
+                <small className="dayMaxMin">
+                    <span
+                        className="dayMax">
+                        Máx: {weather.forecast[count - 1].max}
+                    </span>
+                    <span
+                        className="dayMin">
+                        Mín: {weather.forecast[count - 1].min}
+                    </span>
+                </small>,
+            );
+            setCurrent('Previsão');
+        }
+    };
+
+    const changeR = () => {
+        setDesc(false);
+        if (count < 9) {
+            setCount(() => count + 1);
+            setDescription(weather.forecast[count].description)
+            setDay(weather.forecast[count + 1].weekday);
+            setMonth(weather.forecast[count + 1].date);
+            setUni('°C');
+            setTemp(
+                <small className="dayMaxMin">
+                    <span className="dayMax">
+                        Máx: {weather.forecast[count + 1].max}
+                    </span>
+                    <span className="dayMin">
+                        Mín: {weather.forecast[count + 1].min}
+                    </span>
+                </small>,
+            );
+            setCurrent('Previsão');
+        }
+    };
 
     return (
         <CompDay>
             <div>
                 <button onClick={changeL}>
-                    <ArrowL/>
+                    <ArrowL />
                 </button>
             </div>
             <div className="dayL">
@@ -78,7 +84,7 @@ const Day = () => {
             </div>
             <div>
                 <button onClick={changeR}>
-                    <ArrowR/>
+                    <ArrowR />
                 </button>
             </div>
         </CompDay>
