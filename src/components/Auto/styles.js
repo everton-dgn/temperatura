@@ -7,6 +7,7 @@ export const CompAuto = styled.div`
         padding: 0 20px;
         align-items: center;
         width: 100%;
+        margin-top: 30px;
 
         img {
             width: 170px;

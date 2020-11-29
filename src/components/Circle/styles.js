@@ -89,5 +89,6 @@ export const CompCircle = styled.div`
         display: block;
         position: absolute;
         border-radius: 50%;
+        transition: all 3s linear!important;
     }
 `;

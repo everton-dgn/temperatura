@@ -38,9 +38,9 @@ const Circle = () => {
             <div className="load"
                  style={{
                      transform: 'rotate(-90deg)',
-                     background: temp * 1.5 > 51 ?
-                         `linear-gradient(to left, #00b3b3 50%, transparent 50%, transparent), linear-gradient(${90 + (3.6 * temp * 1.5)}deg, #212429 50%, #00b3b3 50%)` :
-                         `linear-gradient(to right, #212429 50%, transparent 50%, transparent), linear-gradient(${90 + (3.6 * temp * 1.5)}deg, #00b3b3 50%, #212429 50%)`
+                     background: temp > 51 ?
+                         `linear-gradient(to left, #00b3b3 50%, transparent 50%, transparent), linear-gradient(${90 - (3.6 * temp)}deg, #212429 50%, #00b3b3 50%)` :
+                         `linear-gradient(to right, #212429 50%, transparent 50%, transparent), linear-gradient(${90 + (3.6 * temp)}deg, #00b3b3 50%, #212429 50%)`
                  }}
             />
         </CompCircle>

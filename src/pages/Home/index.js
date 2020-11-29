@@ -8,6 +8,7 @@ import City from '../../components/City';
 import axios from 'axios';
 import { Alert } from './styles';
 import { useClime } from '../../context';
+import Popup from '../../components/Popup';
 
 const Home = () => {
 
@@ -16,6 +17,8 @@ const Home = () => {
         setLocation,
         weather,
         setWeather,
+        showPopup,
+        paramSearch,
     } = useClime();
 
     const getWeather = async (lat, long) => {
@@ -23,14 +26,15 @@ const Home = () => {
             params: {
                 format: 'json-cors',
                 locale: 'pt',
-                lat: lat,
-                lon: long,
+                lat: paramSearch === false ? lat : '',
+                lon: paramSearch === false ? long : '',
                 user_ip: 'remote',
+                city_name: paramSearch === false ? '' : paramSearch,
                 key: process.env.REACT_APP_API_KEY,
-            },
+            }
         });
         setWeather(res.data.results);
-        // console.log(res.data.results);
+        console.log(res.data.results);
     };
 
     useEffect(() => {
@@ -57,11 +61,13 @@ const Home = () => {
 
             <Circle/>
 
-            <Control/>
-
             <Auto/>
 
+            <Control/>
+
             <Footer/>
+
+            {showPopup ? <Popup /> : null}
         </>;
     }
 };

@@ -9,7 +9,7 @@ export const CompControl = styled.div`
         justify-content: center;
         align-items: center;
         flex: 1;
-        padding: 50px 20px 20px 20px;
+        padding: 20px;
 
         button {
             background: var(--bgButton);

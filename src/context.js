@@ -22,6 +22,8 @@ export const ClimeProvider = ({ children }) => {
 
     const [count, setCount] = useState(0);
     const [desc, setDesc] = useState(true);
+    const [showPopup, setShowPopup] = useState(false);
+    const [paramSearch, setParamSearch] = useState(false);
 
     return <ClimeContext.Provider value={{
         location,
@@ -62,6 +64,11 @@ export const ClimeProvider = ({ children }) => {
         setCount,
         desc,
         setDesc,
+        showPopup,
+        setShowPopup,
+
+        paramSearch,
+        setParamSearch,
     }}>
         {children}
     </ClimeContext.Provider>;
@@ -76,13 +83,12 @@ export const useClime = () => {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current, setCurrent,
         max, min, wind, humidity, setMax, setMin, setWind, setHumidity, image,
-        setImage, description, setDescription, count, setCount, desc, setDesc,
+        setImage, description, setDescription, count, setCount, desc, setDesc, showPopup, setShowPopup, paramSearch, setParamSearch
     } = context;
     return {
         location, setLocation, weather, setWeather, city, setCity, day,
         setDay, month, setMonth, uni, setUni, temp, setTemp, current,
-        setCurrent, max, min, wind, humidity, setMax, setMin, setWind, setHumidity,
-        image, setImage, description, setDescription, wind_speedy: undefined, count, setCount, desc, setDesc,
+        setCurrent, max, min, wind, humidity, setMax, setMin, setWind, setHumidity, image, setImage, description, setDescription, wind_speedy: undefined, count, setCount, desc, setDesc, showPopup, setShowPopup, paramSearch, setParamSearch,
         forecast() {
             return undefined;
         },

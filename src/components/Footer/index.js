@@ -1,5 +1,6 @@
 import { CompFooter, Ther, Update, Light, Dark, SearchBox } from './styles';
 import { useClime } from '../../context';
+import React, { useState } from 'react';
 
 const Footer = () => {
 
@@ -13,6 +14,7 @@ const Footer = () => {
         setDay,
         setDesc,
         setDescription,
+        setShowPopup,
     } = useClime();
 
     const changeDefault = () => {
@@ -20,7 +22,7 @@ const Footer = () => {
         setCurrent('Agora');
         setUni('°C');
 
-        clearDay()
+        clearDay();
     };
 
     const clearDay = () => {
@@ -29,12 +31,12 @@ const Footer = () => {
         setCount(0);
         setDay(weather.forecast.map(item => item.weekday)[0]);
         setMonth(weather.date.slice(0, 5));
-    }
+    };
 
     return (
         <CompFooter>
             <div>
-                <button>
+                <button onClick={() => setShowPopup(true)}>
                     <SearchBox />
                 </button>
             </div>

@@ -54,8 +54,10 @@ export default createGlobalStyle`
         --fontDay: 25px;
         --bgMain: #212429;
         --bgButton: #292d33;
+        --textDark: #535559;
         --colorWhite: #fff;
         --grayIcon: #c6c6c6;
+        --grayDark: #999999;
         --green: #00b3b3;
         --red: #E43F39;
         --blue: #3E9BF8;
