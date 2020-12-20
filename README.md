@@ -2,11 +2,11 @@
 
 ## Apresentação
 
-![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/1.jpg)
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/1.png)
 
-![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/2.jpg)
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/2.png)
 
-![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/3.jpg)
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/3.png)
 
 ![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/4.png)
 
