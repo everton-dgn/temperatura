@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Auto from '../../components/Auto';
 import Circle from '../../components/Circle';
 import Day from '../../components/Day';
@@ -34,7 +34,6 @@ const Home = () => {
             }
         });
         setWeather(res.data.results);
-        console.log(res.data.results);
     };
 
     useEffect(() => {

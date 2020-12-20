@@ -39,7 +39,6 @@ const Popup = () => {
                 },
             });
             setWeather(res.data.results);
-            console.log(res.data.results);
         };
         getWeather();
     };
