@@ -1,59 +1,81 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PROJETO CONHEÇA MAIS PAÍSES (React js)
 
-## Available Scripts
+## Apresentação
 
-In the project directory, you can run:
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/1.jpg)
 
-### `yarn start`
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/2.jpg)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/3.jpg)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/4.png)
 
-### `yarn test`
+Este projeto tem como objetivo principal estudar React e suas tecnologias no
+desenvolvimento de um sistema que se integra com uma api de dados climáticos.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias Usadas:
 
-### `yarn build`
+⚛ React js :
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- context api,
+- hooks,
+- axios,
+- styled-componets.
 
-The build is minified and the filenames include the hashes<br />
+🔥 Integração com a API: https://hgbrasil.com/status/weather
 
+✅ Lint — ESlint/Prettier/Editor Config
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information
+## Instruções
 
-### `yarn eject`
+Todos comandos devem ser executados na pasta do projeto.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Instalar dependências:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Iniciar servidor e executar o aplicativo no modo de desenvolvimento.
+- Abrir http://localhost:3000 para visualização no navegador.
+- Uma página será recarregada se você fizer edições.:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn start
+```
 
-## Learn More
+- Criar build de produção:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Um arquivo .env criado na raiz do projeto e preenchido com os dados de integração da API da Hgbrasil, ficando no seguinte formato:
 
-### Code Splitting
+```
+REACT_APP_API_KEY = "75678345"
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+*obs: o valor "75678345" da chave da API mostrado acima é apenas um exemplo e não funcionará como chave de autenticação.
 
-### Analyzing the Bundle Size
+- Para o deploy da aplicação o caminho da pasta do projeto deverá ser inserido
+  no arquivo package.json na linha "Homepage" no lugar da "/".
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Features
 
-### Advanced Configuration
+- [x] Projeto responsivo.
 
-### Deployment
+- [x] Integrado com api.
 
-### `yarn build`
+- [x] Mostra automaticamente a previsão do tempo para a cidade do visitante de
+  acordo ip e geolocalização.
 
+- [x] Permite consultar dados de climáticos buscando por cidade.
+
+- [x] Mostra os seguintes dados: temperatura atual, temperatura máxima, velocidade do vento, umidade relatica do ar, previsões para uma semana e descrição com imagem do clima.
+
+## Autoria
+
+Éverton Toffanetto
+
+https://querocriarsite.com
