@@ -6,7 +6,7 @@
 
 ![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/2.png)
 
-![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/3.png)
+![Imagem do projeto](https://raw.githubusercontent.com/querocriarsite/temperatura/master/prints/mobile.png)
 
 Este projeto tem como objetivo principal estudar React e suas tecnologias no
 desenvolvimento de um sistema que se integra com uma api de dados climáticos.
