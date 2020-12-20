@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import {LocalFireDepartment} from "styled-icons/material";
-import {Water} from "styled-icons/ionicons-outline";
-import {Snowflake, Wind} from "styled-icons/fa-solid";
+import styled from 'styled-components';
+import { LocalFireDepartment } from 'styled-icons/material';
+import { Water } from 'styled-icons/ionicons-outline';
+import { Snowflake, Wind } from 'styled-icons/fa-solid';
 
 export const CompControl = styled.div`
     div {
@@ -20,9 +20,9 @@ export const CompControl = styled.div`
 
             &:active {
                 box-shadow: inset 1px 1px 16px #000000,
-                inset -1px -1px 9px #6d6f73,
+                    inset -1px -1px 9px #6d6f73,
                 1px 1px 12px #000000ed,
-                -1px -1px 9px #6d6f73b8;
+                    -1px -1px 9px #6d6f73b8;
             }
 
             svg {
@@ -41,7 +41,7 @@ export const Win = styled(Wind)``;
 
 export const Wtr = styled(Water)`
     path {
-        stroke-width: 50!important;
-        fill: transparent!important;
+        stroke-width: 50 !important;
+        fill: transparent !important;
     }
 `;

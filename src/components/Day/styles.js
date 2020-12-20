@@ -1,5 +1,8 @@
-import styled from "styled-components";
-import {KeyboardArrowLeft, KeyboardArrowRight} from "styled-icons/material-rounded";
+import styled from 'styled-components';
+import {
+    KeyboardArrowLeft,
+    KeyboardArrowRight,
+} from 'styled-icons/material-rounded';
 
 export const CompDay = styled.div`
     width: 100%;

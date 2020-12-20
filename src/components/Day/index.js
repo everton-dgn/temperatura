@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { CompDay, ArrowL, ArrowR } from './styles';
 import { useClime } from '../../context';
 
@@ -21,7 +21,7 @@ const Day = () => {
     useEffect(() => {
         setDay(weather.forecast.map(item => item.weekday)[0]);
         setMonth(weather.date.slice(0, 5));
-    }, [setDay, weather.forecast, setMonth, setCount]);
+    }, [setDay, weather.forecast, weather.date, setMonth, setCount]);
 
     const changeL = () => {
         setDesc(false);

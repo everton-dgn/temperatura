@@ -1,6 +1,6 @@
-import { CompFooter, Ther, Update, Light, Dark, SearchBox } from './styles';
+import { CompFooter, Update, SearchBox } from './styles';
 import { useClime } from '../../context';
-import React, { useState } from 'react';
+import React from 'react';
 
 const Footer = () => {
 
@@ -41,7 +41,7 @@ const Footer = () => {
                 </button>
             </div>
 
-            <div>
+           {/* <div>
                 <button>
                     <Ther />
                 </button>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <button>
                     <Light />
                 </button>
-            </div>
+            </div>*/}
 
             <div>
                 <button onClick={changeDefault}>

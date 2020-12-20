@@ -4,7 +4,7 @@ import { Close } from 'styled-icons/evaicons-solid';
 export const BackgroundPopup = styled.div`
     width: 100%;
     height: 100%;
-    max-width: 100%!important;
+    max-width: 100% !important;
     position: fixed;
     display: flex;
     z-index: 9999;
@@ -79,7 +79,7 @@ export const BackgroundPopup = styled.div`
     }
 
     @media screen and (max-width: 480px) {
-        transform: scale(1.01)!important;
+        transform: scale(1.01) !important;
 
         h1 {
             font-size: 22px;

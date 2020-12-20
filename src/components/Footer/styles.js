@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Thermometer } from 'styled-icons/boxicons-solid';
 import { LightBulb, Refresh } from 'styled-icons/heroicons-outline';
-import { MoonOutline } from 'styled-icons/evaicons-outline';
 import { Search } from 'styled-icons/ionicons-solid';
 
 export const CompFooter = styled.div`
@@ -35,23 +34,21 @@ export const CompFooter = styled.div`
 export const Ther = styled(Thermometer)``;
 
 export const Update = styled(Refresh)`
-    fill: transparent!important;
-    stroke: var(--grayIcon)!important;
+    fill: transparent !important;
+    stroke: var(--grayIcon) !important;
 
     &:hover {
-        stroke: var(--colorWhite)!important;
+        stroke: var(--colorWhite) !important;
     }
 `;
 
 export const Light = styled(LightBulb)`
-    fill: transparent!important;
-    stroke: var(--grayIcon)!important;
+    fill: transparent !important;
+    stroke: var(--grayIcon) !important;
 
     &:hover {
-        stroke: var(--colorWhite)!important;
+        stroke: var(--colorWhite) !important;
     }
 `;
-
-export const Dark = styled(MoonOutline)``;
 
 export const SearchBox = styled(Search)``;
