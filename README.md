@@ -1,4 +1,8 @@
-# PROJETO PREVISÃO DO TEMPO (React js)
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/temperatura?style=plastic)</a> 
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/temperatura?style=plastic) 
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/temperatura?color=yellow&style=plastic)
+
+<h1 align="center">PROJETO PREVISÃO DO TEMPO</h1>
 
 ## Apresentação
 
